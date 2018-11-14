@@ -1,5 +1,5 @@
 {
-  "name": "ishowUI4vue",
+  "name": "ishowui4vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.5",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
@@ -21,11 +23,13 @@
     "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/eslint-config-typescript": "^3.1.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "typescript": "^3.0.0",
+    "vue-cli-plugin-element": "^1.0.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -35,10 +39,28 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "@vue/airbnb",
+      "eslint:recommended", 
       "@vue/typescript"
     ],
-    "rules": {},
+    "rules": {     
+      "semi": [0],      
+      "no-multiple-empty-lines": [0, {"max": 100}],
+      "no-console":[1],
+      "no-mixed-spaces-and-tabs": [0],
+      "spaced-comment": 0,
+      "linebreak-style": [0, "windows"],
+      "no-multi-spaces": 1,
+      "indent": [0, 2],
+      "comma-dangle": [0, "never"],
+      "arrow-body-style": [0,"never"],
+      "quotes": [0, "single"],
+      "quote-props":[0, "never"],
+      "arrow-parens": 0,
+      "arrow-spacing": 0,
+      "class-methods-use-this":[0],
+      "no-underscore-dangle":0,
+      "Yuri_memo": "https://blog.csdn.net/qq_34645412/article/details/78974413, https://eslint.org/"
+    },
     "parserOptions": {
       "parser": "typescript-eslint-parser"
     }
