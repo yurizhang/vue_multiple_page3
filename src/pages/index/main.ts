@@ -1,13 +1,11 @@
 import Vue from 'vue';
-// import { Button, Select } from 'element-ui';
 import App from './App.vue';
 import router from './router';
 import '@/plugins/ishow_adapter'; // ishow_adapter适配器
-
+import Trend from '@/plugins/handle';
 import '@/assets/css.css';
-// Vue.use(Button);
-//Vue.use(Select);
 
+Vue.prototype.Trend=Trend;
 Vue.config.productionTip = false;
 
 new Vue({
