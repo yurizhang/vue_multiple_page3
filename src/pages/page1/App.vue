@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/index">index</router-link> |{{this.$store.state.count}}
-      <router-link to="/page2">page2</router-link>
+       |{{this.$store.state.count}}|
+      <router-link to="/test">test</router-link> |
+      <router-link to="/home">home</router-link> |
+
+      <br><br><br>
+      <router-link to="/page2">page2</router-link>|
+      <router-link to="/index">index</router-link>
     </div>
     <router-view/>
   </div>
