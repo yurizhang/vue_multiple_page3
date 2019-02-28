@@ -1,5 +1,5 @@
 # ishowUI4vue
-多页面打包示例
+多页面打包示例,支持TS,vuex最佳实践
 ## Project setup
 ```
 yarn install
