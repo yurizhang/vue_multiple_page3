@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.0</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+    </head>
+    <body>
+    <div class="x-body layui-anim layui-anim-up">
+        <blockquote class="layui-elem-quote">欢迎管理员：
+            <span class="x-red" id="adminName">&nbsp;</span></blockquote>
+        
+        <fieldset class="layui-elem-field">
+            <legend>开发团队</legend>
+            <div class="layui-field-box">
+                <table class="layui-table">
+                    <tbody>
+                        <tr>
+                            <th>版权所有</th>
+                            <td>南京途牛科技有限责任公司</td>
+                        </tr>
+                        <tr>
+                            <th>开发者</th>
+                            <td>ELFTeam</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+        
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./js/common.js" ></script>
+    <script>
+        $(function() {
+            $("#adminName").html(getCookie('realName'));
+        })
+    
+    //   function tttt(){
+    //        console.log("test")
+    //        window.top.parent_test();
+
+    //        window.parent.openParentIframe("这个标题","http://static.tuniu-sit.org/FED/MCS/build/#/mcs/complaintsSheetQuery?flag=1&complaintId=2103142",999);
+    //        //window.parent.tab.tabAdd("这个标题","http://static.tuniu-sit.org/FED/MCS/build/#/mcs/complaintsSheetQuery?flag=1&complaintId=2103142",999);
+    //        //window.parent.tab.tabChange(999);
+          
+    //   }
+
+    //  //tttt();
+    //  if(window.parent.AllinOne){
+    //      //alert("从框架打开//")
+    //  }
+    
+    </script>
+    
+    </body>
+</html>

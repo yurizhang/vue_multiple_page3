@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BOSS3后台管理系统</title>
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="./images/niu.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/xadmin.css">
+    <link rel="stylesheet" href="./css/fixed.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <script src="./js/config.js" ></script>
+    <script>
+            window.AllinOne=true;  //项目是否从本框架打开其它项目判断这个变量
+    </script>
+</head>
+<body>
+    <!-- 顶部开始 -->
+
+    <!-- 顶部结束 -->
+    <!-- 中部开始 -->
+     <!-- 左侧菜单开始 -->
+    <div class="left-nav">
+      <div class="logo2" style="height:75px">           
+               
+                <div>
+                    <img src="./images/niu.ico" class="team-logo">
+                </div>
+                
+                <ul class="logininfo">
+                        <li class="team-name">BOSS3系统</li>                    
+                        <li class="username">
+                            您好，<span id="userName"></span>
+                            <br> 
+                                <a  class="logoutTitle" id="loginout">[退出]</a>
+                                <span onclick="openMsgbox()" class="messageTitle" >[消息]</span>
+                                <span  id="fed_msg_num" class="messageCount"></span>
+                        </li>                        
+                </ul>
+                
+      </div>
+
+      <div id="side-nav">      
+        <ul id="nav">
+            <li>
+                <a href="javascript:;" style="font-size: 0 !important">
+                    <i class="iconfont icon-table"></i>
+                    <cite>投诉管理系统</cite>
+                    <i class="iconfont nav_right">&#58925;</i>
+                </a>
+                <ul class="sub-menu" id="MCS">
+                </ul>
+            </li>
+      </div>
+    </div>
+    <div class="x-slide_left left_open"><i title="展开左侧栏" class="iconfont"></i></div>
+    <!-- 左侧菜单结束 -->
+    <!-- 右侧主体开始 -->
+    <div class="page-content">
+        <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+          <ul class="layui-tab-title">
+            <li class="home layui-this"><i class="layui-icon">&#xe68e;</i>欢迎</li>
+          </ul>
+          <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <iframe id="default_page" src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    <!-- <div class="page-content-bg"></div> -->
+    <!-- 右侧主体结束 -->
+    <!-- 中部结束 -->
+    <!-- 底部开始 -->
+    <!-- <div class="footer">
+        <div class="copyright">Copyright ©2018 Tuniu All Rights Reserved</div>  
+    </div> -->
+    <!-- 底部结束 -->
+    <script type="text/javascript" src="./lib/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./lib/axios.min.js" charset="utf-8"></script>
+    <script src="./js/common.js" ></script>
+    <script src="./js/third-part.js?v=2" ></script>
+    <script type="text/javascript" src="./js/deal.js?v=2" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <script>
+        function openMsgbox(){      
+            var uc_username=Number(getCookie('userId'));  // 取用户名username
+            $("#fed_msg_num").html("0").hide();
+            window.open("https://oa.tuniu.com/message_box/index.php");   //后一个是窗口的名字，保持打开一个新窗口
+            return false;
+        }
+
+        $(function(){
+            var URL=getQueryString("redirectUrl");
+            var Base=new Base64();
+            URL=Base.decode(URL);
+            if(URL!=""){
+                //openParentIframe("标题",URL,999);
+                document.getElementById("default_page").src=URL;
+            }
+        })
+
+
+    </script>
+    <script src="http://static.tuniu.org/FED/MCS/build/polyfill.min.js"></script>
+</body>
+</html>

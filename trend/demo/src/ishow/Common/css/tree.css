@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.ishow-tree {
+    cursor: default;
+    background: #fff;
+    border: 1px solid #d1dbe5
+}
+
+.ishow-tree__empty-block {
+    position: relative;
+    min-height: 60px;
+    text-align: center;
+    width: 100%;
+    height: 100%
+}
+
+.ishow-tree__empty-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #5e7382
+}
+
+.ishow-tree-node {
+    white-space: nowrap
+}
+
+.ishow-tree-node>.ishow-tree-node__children {
+    overflow: hidden;
+    background-color: transparent
+}
+
+.ishow-tree-node.is-expanded>.ishow-tree-node__children {
+    display: block
+}
+
+.ishow-tree-node__expand-icon,
+.ishow-tree-node__label,
+.ishow-tree-node__loading-icon {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.ishow-tree-node__content {
+    line-height: 36px;
+    height: 36px;
+    cursor: pointer
+}
+
+.ishow-tree-node__content>.ishow-checkbox,
+.ishow-tree-node__content>.ishow-tree-node__expand-icon {
+    margin-right: 8px
+}
+
+.ishow-tree-node__content>.ishow-checkbox {
+    vertical-align: middle
+}
+
+.ishow-tree-node__content:hover {
+    background: #e4e8f1
+}
+
+.ishow-tree-node__expand-icon {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border: 6px solid transparent;
+    border-right-width: 0;
+    border-left-color: #97a8be;
+    border-left-width: 7px;
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    transition: transform .3s ease-in-out
+}
+
+.ishow-tree-node__expand-icon:hover {
+    border-left-color: #999
+}
+
+.ishow-tree-node__expand-icon.expanded {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.ishow-tree-node__expand-icon.is-leaf {
+    border-color: transparent;
+    cursor: default
+}
+
+.ishow-tree-node__label {
+    font-size: 14px
+}
+
+.ishow-tree-node__loading-icon {
+    margin-right: 4px;
+    font-size: 14px;
+    color: #97a8be
+}
+
+.ishow-tree--highlight-current .ishow-tree-node.is-current>.ishow-tree-node__content {
+    background-color: #edf7ff
+}

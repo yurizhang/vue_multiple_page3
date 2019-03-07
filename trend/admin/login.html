@@ -1,0 +1,494 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BOSS3后台管理系统登陆页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/config.js" ></script>
+  <script src="./js/common.js"></script>
+  <style>
+    html {
+      font-family: sans-serif;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: '\5B8B\4F53','SimSun','microsoft yahei',sans-serif;
+    }
+    .loginParent h1 {
+    color: #fff;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: .5em;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 500;
+    }
+    .loginParent {
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      background: #001529;
+    }
+    .login-form {
+      margin: 0 auto;
+      border: 0;
+      margin-top: 50px;
+    }
+    .login-form {
+        width: 500px;
+        height: 300px;
+        border: 1px solid #ccc;
+        padding: 50px 100px 50px 0;
+        background: #fff;
+    }
+    .ishow-form-item{
+      margin: 30px 0;
+    }
+    .ishow-form-item:after, .ishow-form-item__content:after {
+      clear: both;
+    }
+    *, *::before, *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    ::selection {
+        background: #1890ff;
+        color: #fff;
+    }
+    .ishow-form-item:after, .ishow-form-item:before {
+      display: table;
+      content: "";
+    }
+    *, *::before, *::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .ishow-form-item__label {
+      text-align: right;
+      vertical-align: middle;
+      float: left;
+      font-size: 14px;
+      color: #48576a;
+      line-height: 1;
+      padding: 11px 12px 11px 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .ishow-form-item.is-required .ishow-form-item__label:before {
+      content: '*';
+      color: #ff4949;
+      margin-right: 4px;
+    } 
+    .ishow-form-item__content {
+      line-height: 36px;
+      position: relative;
+      font-size: 14px;
+    }
+    .ishow-form-item__content:after, .ishow-form-item__content:before {
+      display: table;
+      content: "";
+    }
+    .ishow-input {
+      position: relative;
+      font-size: 14px;
+    }
+    .ishow-input, .ishow-input__inner {
+        width: 100%;
+        display: inline-block;
+    }
+    a, area, button, [role="button"], input:not([type=range]), label, select, summary, textarea {
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+    }
+    input[type="text"], input[type="password"], input[type="number"], textarea {
+        -webkit-appearance: none;
+    }
+    .ishow-input__inner {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #bfcbd9;
+        color: #1f2d3d;
+        font-size: inherit;
+        height: 36px;
+        line-height: 1;
+        outline: 0;
+        padding: 3px 10px;
+        -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+        -o-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+        transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    }
+    .ishow-input, .ishow-input__inner {
+        width: 100%;
+        display: inline-block;
+    }
+    .ishow-input__inner, .ishow-textarea__inner {
+        background-image: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    button, html [type="button"], [type="reset"], [type="submit"] {
+      -webkit-appearance: button;
+    }
+   
+    .ishow-button {
+        white-space: nowrap;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #c4c4c4;
+        color: #1f2d3d;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    .ishow-button, .ishow-button-group, .ishow-input, .ishow-input__inner {
+        display: inline-block;
+    }
+    .ishow-button, .ishow-input__inner {
+        -webkit-appearance: none;
+        line-height: 1;
+        outline: 0;
+    }
+    .login-btn {
+        width: 100%;
+    }
+    .ishow-button-primary {
+        color: #fff;
+        background-color: #20a0ff;
+        border-color: #20a0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="loginParent">
+    <h1 style='line-height:71px;text-align:center'><img src='./images/niu.ico' className='niuIco' style='margin-right:10px;width:40px;margin-top:12px'/><span style='vertical-align:top'>BOSS3后台管理系统</span></h1>
+    <form class="ishow-form ishow-form--labishow-right demo-ruleForm login-form">
+      <div class="ishow-form-item is-required">
+        <label class="ishow-form-item__label" style="width: 100px;">用户名</label>
+        <div class="ishow-form-item__content" style="margin-left: 100px;">
+          <div class="ishow-input">
+            <input type="text" id="name" class="ishow-input__inner" autocomplete="off" value="">
+          </div>
+        </div>
+      </div>
+      <div class="ishow-form-item is-required">
+        <label class="ishow-form-item__label" style="width: 100px;">密码</label>
+        <div class="ishow-form-item__content" style="margin-left: 100px;">
+          <div class="ishow-input">
+            <input type="password" id="password" class="ishow-input__inner" autocomplete="off" value="">
+          </div>
+        </div>
+      </div>
+      <div class="ishow-form-item">
+        <div class="ishow-form-item__content" style="margin-left: 100px;">
+          <button class="ishow-button ishow-button-primary login-btn" type="button" id="button">
+            <span>登录</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function(){
+      var codeHandler = (function(){
+        var base64Chars = [
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+                'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+                'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+                'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+                'w', 'x', 'y', 'z', '0', '1', '2', '3',
+                '4', '5', '6', '7', '8', '9', '+', '/'
+            ],
+            encode = {
+                'base64':codeBase64
+            },
+            decode = {
+                'base64':decodeBase64
+            }
+        handleFormat = {
+            'utf-8':toUTF8Binary
+        };
+        function stringToBinary(str , size , encodeType ){
+            //  str-字符串 , size - 转换后的二进制位数 ,encodeType - 采用什么格式去保存二进制编码
+            var i,
+                len,
+                binary = '';
+            for ( i = 0 , len = str.length ; i < len ; i++ ){
+                binary = binary + handleFormat[encodeType.toLowerCase()](str.charCodeAt(i));
+            }
+            return binary;
+        }
+        // 转换为以UTF-8格式的二进制数据
+        function toUTF8Binary(unicode){
+            var len,
+                binary = '',
+                star = 0,
+                bitStream = unicode.toString(2), // 转换为二进制比特流
+                bitLen = bitStream.length,
+                i;
+            if( unicode >= 0x000000 && unicode <= 0x00007F ){
+                binary = bitStream;
+                for( i = 0 , len = 8 ; i　< len-bitLen ; i ++ ){
+                    binary = 0 +binary; // 不足8位补0
+                }
+            }else if( unicode >=0x000080 && unicode <=0x0007FF ){
+                binary = bitStream;
+                for( i = 0 , len = 11 ; i　< len-bitLen ; i ++ ){
+                    binary = 0 +binary; // 不足11位补0
+                }
+                binary = '110'+binary.substr(0,5) + '10' + binary.substr(5,6);
+            }
+            else if( unicode >=0x000800 && unicode <=0x00FFFF ){
+                binary = bitStream;
+                for( i = 0 , len = 16 ; i　< len-bitLen ; i ++ ){
+                    binary = 0 +binary; // 不足16位补0
+                };
+                binary = '1110' + 
+                        binary.substr(0,4) + 
+                        '10' + 
+                        binary.substr(4,6) + 
+                        '10' + 
+                        binary.substr(10,6);
+            }
+            else if( unicode >=0x010000 && unicode <=0x10FFFF ){
+                binary = bitStream;
+                for( i = 0 , len = 21 ; i　< len-bitLen ; i ++ ){
+                    binary = 0 +binary; // 不足21位补0
+                }
+                binary = '11110' + 
+                        binary.substr(0,3) + 
+                        '10' + 
+                        binary.substr(3,6) + 
+                        '10' + 
+                        binary.substr(9,6) +
+                        '10' + 
+                        binary.substr(15,6);
+            }
+            return binary;
+        }
+        // 编码成base64格式
+        function base64Parse(binary24,flag){
+            var i,
+                len,
+                result = '',
+                decode;
+            if(flag == 1){
+                for( i = 0 ; i < 4 ; i++){
+                    decode = parseInt(binary24.substr(i*6,6),2);
+                    result = result + base64Chars[decode];
+                }
+            }
+            else{
+                for ( i=0 , len = Math.floor(flag/6) ;i<len+1; i++){
+                    decode = parseInt(binary24.substr(i*6,6),2);
+                    result = result + base64Chars[decode];
+                }
+                for( i = 0; i < 3-len ;i ++){
+                    result = result + '=';
+                }
+            }
+            return result;
+        }
+        // 解析为base64格式的二进制数据
+        function codeBase64(str){
+            var i,
+                len,
+                rem,
+                mer,
+                result = '',
+                strBinaryAry = [],
+                binary = stringToBinary(str , 8 , 'utf-8'); // base64是基于utf-8格式保存的二进制数据转换的
+            len = binary.length;
+            mer = Math.floor(len / 24);
+            rem = len % 24;
+            for( i = 0 ; i < mer ; i++){
+                result = result +  base64Parse(binary.substr(i*24,24),1);
+            }
+            remCode = binary.substr(len-rem,rem);
+            if( rem > 0 ){
+                for( i =0 ; i < 24-rem ; i++){
+                    remCode = remCode + 0;
+                }
+                result = result +  base64Parse(remCode,rem)
+            }
+            return result;
+
+        }
+        // 解码base64格式的数据
+        function decodeBase64(str){
+            var i,
+                j,
+                k,
+                len,
+                t = 0,
+                curbinary,
+                start  = 0 ,
+                flag = [
+                    {
+                        str:'0',
+                        len:8
+                    },
+                    {
+                        str:'110',
+                        len:11
+                    },
+                    {
+                        str:'1110',
+                        len:16
+                    },
+                    {
+                        str:'11110',
+                        len:21
+                    }],
+                binary= '',
+                newStr = '';
+            for( i = 0 , len = str.length ; i < len ; i++){
+                var curbinary  = base64Chars.indexOf(str.charAt(i)).toString(2);
+                if( curbinary != '-1'){
+
+                    for( j = 0 ; curbinary.length <6 ; j++){
+                        curbinary = 0 + curbinary;
+                    }
+                    binary = binary + curbinary;
+                }
+                if( i >= len-2 && str.charAt(i) == '='){
+                    ++t;
+                }
+            }
+            if( t == 0 ){
+                len = binary.length;
+            }
+            else{
+                len = binary.length - (6-2*t)
+            }
+
+            for( ; start < len ;){
+                for( j  = 0 ; j < 4 ; j++){
+
+                    if(binary.indexOf( flag[j].str ,start) == start){
+                        if(flag[j].len == 8){
+                            newStr = newStr +  String.fromCharCode(parseInt(binary.substr(start,8),2));
+                        }
+                        else if(flag[j].len == 11){
+                            newStr = newStr + 
+                                    String.fromCharCode(parsetInt(binary.substr(start+3,5) + 
+                                    binary.substr(start+10,6),2));
+                        }
+                        else if(flag[j].len == 16){
+                            newStr = newStr + 
+                                    String.fromCharCode(parsetInt(binary.substr(start+4,4) + 
+                                    binary.substr(start+10,6) + 
+                                    binary.substr(start+18,6),2));
+                        }
+                        else if(flag[j].len == 21){
+                            newStr = newStr + 
+                                    String.fromCharCode(parseInt(binary.substr(start+5,3) + 
+                                    binary.substr(start+10,6) + binary.substr(start+18,6) +
+                                    binary.substr(start+26,6),2));
+                        }
+                        start  =  start  + flag[j].len;
+                        break;
+                    }
+                }
+            }
+            binary = null;
+            return newStr;
+        }
+        return {
+            encode:function(str ,type){
+                return encode[type](str);
+            },
+            decode:function(str, type){
+                return decode[type](str);
+            }
+        };
+    })();
+      function paraseParams (data) {
+        var retrunData= {}
+        if(data) {
+          if(data.indexOf("&") !== -1) {
+            var paramsArr = data.substring(1,data.length).spit("&"); 
+          }else {
+            var paramsArr = [].concat(data.substring(1,data.length));             
+          }
+         
+          for(var i in paramsArr){
+            retrunData[paramsArr[i].split('=')[0]] = paramsArr[i].split('=')[1]
+          }
+        }
+        return retrunData;
+      }
+      var params = paraseParams(window.location.search);
+      if(params && params.login=== "error") {
+        alert('登录失败，请重新登录');
+      }
+        //获取params参数
+       function getQueryString(name) { 
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+            var r = window.location.search.substr(1).match(reg); 
+            if (r != null) return unescape(r[2]); return null; 
+        }
+        
+        //原本的登陆方法
+      function originLogin() {
+        var userName = $("#name").val();
+        var password =codeHandler.encode($("#password").val(),'base64'); 
+        //如果不存在 redirectUrl  跳转到 此系统的首页
+        var redirectUrl = getQueryString('redirectUrl') || configObj[env].ADM_URL;
+        if(redirectUrl && redirectUrl.indexOf('http') === -1) {
+            redirectUrl = window.location.protocol+"//" +redirectUrl;
+        }
+        if(!!redirectUrl) {
+            window.location.href = configObj[env].SERVER_URL+"api/login"+"?userName="+userName+"&password="+password+"&redirectUrl="+redirectUrl;
+        }else{
+            window.location.href =  configObj[env].SERVER_URL+"api/login"+"?userName="+userName+"&password="+password
+        }          
+      }
+
+      //新的安全登陆的方法
+      function crtyoLogin() {
+        var userName = $("#name").val();
+        var randomNum = parseInt(Math.random() *10000);
+        var password =codeHandler.encode(randomNum+","+$("#password").val(),'base64'); 
+        var content = codeHandler.encode("ur="+userName+"&ps="+password,'base64');
+        //如果不存在 redirectUrl  跳转到 此系统的首页
+        var redirectUrl = getQueryString('redirectUrl') || configObj[env].ADM_URL;
+        if(redirectUrl && redirectUrl.indexOf('http') === -1) {
+            redirectUrl = window.location.protocol+"//" +redirectUrl;
+        }
+        if(!!redirectUrl) {
+            window.location.href = configObj[env].SERVER_URL+"api/crtyoLogin"+"?c="+content+"&p="+randomNum+"&redirectUrl="+redirectUrl;
+        }else{
+            window.location.href = configObj[env].SERVER_URL+"api/crtyoLogin"+"?c="+content+"&p="+randomNum
+        }
+      }
+
+      $("#button").bind('click', function(){
+        crtyoLogin();
+      })
+    })
+  </script>
+</body>
+</html>

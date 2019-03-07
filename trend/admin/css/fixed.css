@@ -1,0 +1,137 @@
+body {
+    font-family: "宋体",SimSun,microsoft yahei,sans-serif !important;
+}
+*{
+    font-family: "宋体",SimSun,microsoft yahei,sans-serif !important;
+    font-size:12px !important;
+}
+.left-nav {
+    background-color: #001529;
+    transition: all .2s;
+    top:0;
+    bottom: 0;  
+}
+.left-nav #nav li a cite {
+    font-size: 12px;
+}
+.left-nav #nav li a {
+    font-size: 12px;
+    padding: 13px 15px 13px 20px;
+    display: block;
+    color: hsla(0,0%,100%,.65);
+}
+
+
+.left-nav #nav li .sub-menu li a {
+    font-size: 12px; 
+    padding: 13px 15px 13px 48px;
+}
+
+.left-nav #nav  a:hover {
+    color:#fff;
+}
+
+.left-nav #nav li .sub-menu li a:hover {
+    color: #fff;
+}
+
+.left-nav #nav li {
+    border-bottom: none;
+    margin: 4px 0 8px;
+}
+
+.left-nav #nav li .liselected{
+    background-color: #1890ff;
+}
+
+.left-nav #nav li .liselected a {
+    color:#fff;
+}
+/*三级菜单*/
+.left-nav #nav li .sub-menu>li .sub-menu>li .sub-menu>li a {
+    padding-left: 72px;
+}
+
+/*隐藏footer*/
+.page-content {
+    bottom: 0; 
+    top: 6px;
+}
+.page-content-bg {
+    bottom: 0;  
+}
+
+
+
+
+/*顶部标签*/
+.page-content .layui-tab-title{
+    height: 42px;
+    border-bottom: 1px solid #20a0ff;
+    background: #fff;
+
+}
+.page-content .layui-tab-title li {
+    line-height: 42px;
+}
+
+.page-content .layui-tab-title .layui-this:after{
+    height: 42px;
+    border: none;
+}
+
+.layui-tab-title li .layui-tab-close{
+    color: #fff;
+}
+
+.page-content .layui-tab-title .layui-this {
+    background: #20a0ff;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+  
+}
+
+.iconfont{font-size: 12px}
+
+
+/*logo*/
+.logo2{
+    line-height: 58px;
+    background: hsla(0,0%,100%,.2);
+    margin: 0 12px;
+    padding: 0 0 0 6px;
+    height: 58px;
+    position: relative;
+}
+
+.logo2 .team-logo {
+    width: 36px;
+    margin-top:-3px;
+    margin-left:2px;
+}
+.logo2 .logininfo{
+    margin-left: 48px;
+    width: 150px;
+    line-height: 20px;
+    position: absolute;
+    top: 10px;
+}
+
+.logo2 .team-name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+.logo2 .username{font-size: 12px;color: #fff;}
+
+/*左菜单 的箭头*/
+.x-slide_left_zoomin{
+    background-position: -6px center;
+}
+
+@media screen and (max-width: 768px){
+    .x-slide_left {
+        left: -221px;
+    }
+
+}

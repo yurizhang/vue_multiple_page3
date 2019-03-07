@@ -1,0 +1,881 @@
+body {
+    /*  字体 */
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+table.grid {
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #fff;
+    color: #5e6d82;
+    font-size: 14px;
+    margin-bottom: 45px;
+    line-height: 1.5em;
+}
+
+table.grid th:first-child,
+table.grid td:first-child {
+    padding-left: 10px;
+}
+
+table.grid td,
+table.grid th {
+    border-bottom: 1px solid #eaeefb;
+    padding: 10px;
+    max-width: 250px;
+}
+
+.table-smallSize {
+    font-size: 12px
+}
+
+.table-smallSize td {
+    height: 28px !important
+}
+
+/* 图标 */
+
+.icon-list {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-list li {
+    float: left;
+    width: 10%;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+    color: #333;
+    font-size: 13px;
+    transition: color .15s linear;
+    border: 1px solid #eaeefb;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.icon-list li span {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+    color: #99a9bf;
+}
+
+.icon-list li span i {
+    color: #333;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+/* for Color.jsx */
+
+.bg-blue {
+    background-color: #409eff;
+}
+
+.bg-success {
+    background-color: #13CE66;
+}
+
+.bg-warning {
+    background-color: #F7BA2A;
+}
+
+.bg-info {
+    background-color: #20A0FF;
+}
+
+.bg-danger {
+    background-color: #FF4949;
+}
+
+.bg-text-primary {
+    background-color: #1F2D3D;
+}
+
+.bg-text-regular {
+    background-color: #324057;
+}
+
+.bg-text-secondary {
+    background-color: #475669;
+}
+
+.bg-text-placeholder {
+    background-color: #c0c4cc;
+}
+
+.bg-border-base {
+    background-color: #8492A6;
+}
+
+.bg-border-light {
+    background-color: #99A9BF;
+}
+
+.bg-border-lighter {
+    background-color: #C0CCDA;
+}
+
+.bg-border-extra-light {
+    background-color: #f2f6fc;
+}
+
+.bg-border-gray {
+    background-color: #D3DCE6;
+}
+
+.bg-border-lightgray {
+    background-color: #E5E9F2;
+}
+
+.bg-border-lightergray {
+    background-color: #EFF2F7;
+}
+
+.demo-color-box {
+    border-radius: 4px;
+    padding: 20px;
+    height: 74px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    width: 120px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.demo-color-box-vertical {
+    border-radius: 4px;
+    padding: 20px;
+    height: 74px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    width: 200px;
+}
+
+.demo-color-box .value {
+    font-size: 12px;
+    opacity: .69;
+    line-height: 24px;
+}
+
+.demo-color-box-group .demo-color-box:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+.demo-color-box-group {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* for Color.jsx */
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 弹出窗口 */
+
+.dialog {
+    text-align: left;
+}
+
+.codeCollapse .ishow-collapse-item__content {
+    background: #000;
+    font-size: 16px;
+}
+
+/* 404页面样式 */
+
+.lost-404-title {
+    color: #2d8cf0;
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.lost-404-content {
+    color: #999;
+    text-align: center;
+    top: 80px;
+}
+
+/*登录表单样式*/
+
+.login-form {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 50px 100px 50px 0;
+    background: #fff;
+}
+
+
+
+.login-btn {
+    width: 100%;
+}
+
+.codeCollapse .ishow-collapse-item__content {
+    overflow-x: auto !important;
+}
+
+/* QueryCriteriaModule START*/
+
+.QueryCriteriaModule {
+    margin-top: 20px;
+}
+
+.QueryCriteriaModule_ShowPart {
+    position: relative;
+    overflow: hidden;
+}
+
+.QueryCriteriaModule .QueryCriteriaModule_Row {
+    margin-bottom: 20px;
+}
+
+.QueryCriteriaModule .QueryCriteriaModule_Row>.QueryCriteriaModule_Col {
+    text-align: center;
+}
+
+.QueryCriteriaModule_Col>label {
+    display: inline-block;
+    width: 16%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.QueryCriteriaModule_Col>.QueryCriteriaModule_Input {
+    width: 70%;
+    margin-left: 2%;
+}
+
+.QueryCriteriaModule_Expend {
+    border-bottom: 1px dashed #ddd;
+    margin: 35px 0px;
+    position: relative;
+    width: 100%;
+}
+
+.QueryCriteriaModule_Expend>.QueryCriteriaModule_Expend_Button {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: -16px;
+    width: 80px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.QueryCriteriaModule_CollapsePart {
+    display: none;
+}
+
+.QueryCriteriaModule_Button {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.QueryCriteriaModule_DatePicker {
+    display: inline-block;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.QueryCriteriaModule_DatePicker .ishow-date-editor.ishow-input {
+    width: auto !important;
+}
+
+.QueryCriteriaModule_DatePicker .ishow-date-editor {
+    width: 45%;
+}
+
+.QueryCriteriaModule_rangeSpliter {
+    display: inline-block;
+    width: 10%;
+}
+
+/* QueryCriteriaModule END */
+
+.my-autocomplete-poi li {
+    line-height: normal !important;
+}
+
+.ishow-customItem-detail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+div.aniInput div {
+    width: 200px;
+    margin: 15px 10px 0 0;
+}
+
+
+
+.box {
+  width: 400px;
+}
+.box .top {
+  text-align: center;
+}
+.box .ishow-tooltip {
+  margin-left: 0;
+}
+
+.box .item {
+  margin: 4px;
+}
+.ishow-tooltip {
+  display: inline-block;
+}
+.box .left {
+  float: left;
+  width: 60px;
+}
+.box .right {
+  float: right;
+  width: 60px;
+}
+.box .bottom {
+  clear: both;
+  text-align: center;
+}
+
+
+.grade {
+  font-size: 28px;
+}
+.intro-block h3{
+  font-size: 22px;
+  margin:45px 0 15px;
+}
+.block{
+  padding: 54px 0;
+  display:inline-block;
+  width:50%;
+  border:1px solid #eff2f6;
+  text-align: center;
+}
+
+.halfBlock{
+  border:1px solid #eff2f6;
+  padding: 24px;
+}
+
+
+/* .container{
+  width: 1140px;
+  padding: 60px 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+} */
+.contentFont{
+  /* padding:60px,189px,95px,219px; */
+  display: inline-block;
+  vertical-align: top;
+  }
+#typography{
+  font-size: 28px;
+  color: typography;
+}
+.contentFont p{
+  margin:8px 0;
+  font-size: 14px;
+  color:#5e6d82;
+}
+.contentFont h3{
+  font-size: 22px;
+  /* margin-top: 22px; */
+  margin:45px 0 15px;
+}
+.demo_box{
+  border: 1px solid #eaeefb;
+  height: 200px;
+  width:200px;
+  position: relative;
+  margin-top:20px;
+  /* font-size:40px; */
+  /* color:#1f2d3d; */
+  display: inline-block;
+  margin-right: 17px;
+}
+
+.pingfang .hchf{
+  font-family: PingFang SC;
+} 
+.hiragino .hchf{
+  font-family: Hiragino Sans GB;
+}
+.microsoft .hchf{
+  font-family: Microsoft YaHei;
+}
+
+.helveticaN .hchf{
+  font-family: Helvetica Neue;
+}
+.helvetica .hchf{
+  font-family: Helvetica;
+}
+.arial .hchf{
+  font-family: Arial;
+}
+
+.hchf{
+  font-size:40px;
+  color:#1f2d3d;
+  text-align: center;
+  line-height: 160px;
+  padding-bottom: 36px;
+}
+.little_box{
+  width:100%;
+  height: 35px;
+  line-height: 35px;
+  position:absolute;
+  bottom: 0;
+  font-size: 14px;
+  color:#8492a6;
+  text-align: left;
+  text-indent:10px;
+  border-top:1px solid #eaeefb;
+}
+
+.language_style{
+  font-size:12px;
+  padding: 18px 24px;
+  line-height: 1.8;
+}
+.font-family{
+  color:#c08b30 ;
+}
+.token.string{
+  color: #22a2c9;
+}
+.token1.string{
+  color:#5e6687;
+}
+
+.demo-size1 p{
+  color:#1f2f3d;
+  font-family:"Microsoft YaHei, 微软雅黑";
+}
+.demo-size2 p{
+  color:#1f2f3d;
+  font-family:  "宋体";
+}
+.demo-size3 p{
+  color:#1f2f3d;
+  font-family:  "Helvetica Neue";
+}
+
+.demo-size4 p{
+  color:#1f2f3d;
+  font-family:  "Helvetica";
+}
+.demo-size5 p{
+  color:#1f2f3d;
+  font-family:  "PingFang SC";
+}
+.demo-size6 p{
+  color:#1f2f3d;
+  font-family:  "Hiragino Sans GB";
+}
+.demo-size7 p{
+  color:#1f2f3d;
+  font-family:  "Arial";
+}
+.demo-size8 p{
+  color:#1f2f3d;
+  font-family:  "sans-serif";
+}
+
+
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8,  caption{
+  color:#22a2c9;
+  font-size: 18px;
+  caption-side:top
+}
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8,  .h1 p{
+  font-size: 20px;
+  /* color:#1f2f3d; */
+}
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8, .h2 p{
+  font-size:18px;
+}
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8, .h3 p{
+  font-size: 16px;
+}
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8, .text-regular p{
+  font-size:14px;
+}
+.demo-size1,  .demo-size2,  .demo-size3, .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8, .text-smaller p{
+  font-size:12px;
+}
+.demo-size1,  .demo-size2,  .demo-size3,  .demo-size4, .demo-size5, .demo-size6, .demo-size7, .demo-size8, .color-dark {
+  color:#99a9bf;
+  font-size:16px;
+}
+
+.thomas{
+  font-family: thomas !important;
+}
+
+.songti{
+  font-family: '宋体';
+}
+.yahei{
+  font-family:  "Microsoft YaHei", "微软雅黑"
+}
+.numbers{
+  font-size: 24px;
+  color: #1f2d3d;
+  text-align: center;
+  line-height: 160px;
+  padding-bottom: 36px;
+}
+/*slider*/
+.demo-box .demonstration {
+  font-size: 14px;
+  color: #8492a6;
+  line-height: 44px;
+}
+.demo-box .demonstration + .el-slider {
+  float: right;
+  width: 70%;
+  margin-right: 20px;
+}
+.demo-form .ishow-input{
+    width: 33.3%;
+}
+.demo-form .ishow-textarea__inner{
+    width: 33% ;
+}
+.demo-form .ishow-input-group{
+    width: 33% !important;
+    margin-top: 15px;
+}
+
+.ishow-input-for-select .ishow-input {
+    width: 100%
+}
+
+
+/* .demo-form .ishow-icon-time{
+    left: 379px !important;
+} */
+/* .mine */
+/* .ishow-table {
+    font-size: 12px !important;
+} */
+.ishow-tabs__active-bar{
+    height: 2px !important;
+    
+}
+.ishow-tabs--card>.ishow-tabs__header .ishow-tabs__item.is-active{
+    background-color:#20a0ff ;
+    color: #fff;
+    border-bottom-color: #20a0ff !important;
+}
+/* .jilin .ishow-tabs__header{
+    border-bottom: 1px solid #20a0ff;
+
+} */
+.QueryCriteriaModule_Button{
+    text-align: left !important;
+}
+.QueryCriteriaModule .QueryCriteriaModule_Row>.QueryCriteriaModule_Col{
+    text-align: left !important;
+}
+
+
+.ishow_dialog--small{
+    min-width: 600px;
+}
+.ishow-select-dropdown__list{
+    min-height: 10px;
+}
+.allInOneBreadCrumbs{
+    position: relative;
+    display: block !important;
+    line-height: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+table{
+    border-collapse: separate !important;
+}
+.ishow-table .cell,
+.ishow-table th>div {
+    padding-left:4px !important;
+}
+.ishow-table{
+    font-size:12px !important;
+    text-align:left !important;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.ishow-table td,
+.ishow-table th{
+    height:28px !important;
+    line-height: 28px !important;
+}
+.ishow-table th>.cell{
+    line-height: 28px !important;
+}
+.ishow-table th>.cell span{
+    line-height: 28px !important;
+}
+.ishow-table_2_column_4{
+    border-right: none !important;
+}
+
+.checkbox_margin .ishow-checkbox {
+    margin-bottom: 15px !important;
+}
+
+.checkbox_margin .ishow-table {
+    margin-top:0 !important;
+}
+
+.block{
+    display: block !important;
+    text-align:left;
+    border: none; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.ishow-button--large{
+    font-size: 12px !important;
+}
+.QueryCriteriaModule_Expend_Button {
+    font-size: 12px !important;
+}
+.ishow-tabs__header{
+    border-bottom: 1px solid #20a0ff !important;
+}
+.tabs_border_bottom .ishow-tabs__header {
+    border-bottom: 1px solid #d1dbe5 !important;
+}
+.search-tabs .ishow-tabs__header {
+    border-bottom: 1px solid #d1dbe5 !important;
+}
+.ishow-select-dropdown__list {
+    height: 200px !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    /* -webkit-scrollbar-base-color:#FEFAF1 !important; */
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+.ishow-select-dropdown__wrap ::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+    background-color: #fff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: none;
+  background-color: #F5F5F5;
+
+} */
+
+/*定义滑块 内阴影+圆角*/
+
+.ishow-select-dropdown__wrap ::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */
+    background-color: #eee;
+}
+
+
+/* POI选择基本用法加滚动条*/
+.ishow-autocomplete-suggestion__list{
+    height: 250px;
+    overflow: scroll;
+}
+.my-autocomplete.ishow-scrollbar__wrap {
+    height: 250px;
+}
+.ishow-popper{
+    top: 38px !important;
+    left:0px !important;
+}
+#cascaderTips{
+   font-size: 12px;
+   margin: 14px 0px; 
+}
+
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+/* The location pointed to by the popup tip. */
+.popup-tip-anchor {
+    height: 0;
+    position: absolute;
+    /* The max width of the info window. */
+    width: 200px;
+  }
+  /* The bubble is anchored above the tip. */
+  .popup-bubble-anchor {
+    position: absolute;
+    width: 100%;
+    bottom: /* TIP_HEIGHT= */ 8px;
+    left: 0;
+  }
+  /* Draw the tip. */
+  .popup-bubble-anchor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Center the tip horizontally. */
+    transform: translate(-50%, 0);
+    /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
+    width: 0;
+    height: 0;
+    /* The tip is 8px high, and 12px wide. */
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: /* TIP_HEIGHT= */ 8px solid white;
+  }
+  /* The popup bubble itself. */
+  .popup-bubble-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -100%);
+    /* Style the info window. */
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    overflow-y: auto;
+    max-height: 60px;
+    box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+  }
+
+  .context-contain{
+    width: 280px;
+    height: 50px;
+    position: absolute;
+    margin: 0;
+    outline: 0;
+    vertical-align: baseline;
+    /* color: #333; */
+    background: #fff;
+    border: 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+    border-radius: 8px;
+    /* line-height: 20px; */
+    /* font-size:  14px !important; */
+    white-space: nowrap;
+  }
+.context-contain:before{
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #fff;
+  }
+  .context-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 50px;
+    background: #ebebeb;
+  }
+  .context-text{
+    position: absolute;
+    left: 65px;
+    right: 60px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .context-text span{
+          width: 100%;
+            line-height: 20px;
+            overflow: hidden;
+            height: 20px;
+            white-space: nowrap;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            display: block;
+  }
+  .context-text  .subtext{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px; 
+  }
+  .context-link{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    font-size: 14px;
+    color: #3cc;
+    text-align: center;
+    line-height: 50px;
+  }
