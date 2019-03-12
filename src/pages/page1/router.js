@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Vue from 'vue'   //from cdn
+// import Router from 'vue-router' // from cdn
 import Home from './views/Home.vue'
 import Test from './views/Test.vue'
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   mode: 'hash',
   base: process.env.BASE_URL,
   routes: [

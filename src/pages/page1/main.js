@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
-import Vue from 'vue'
+// import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/index'
 
-//Vue.prototype.$ajax = axios
+Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 

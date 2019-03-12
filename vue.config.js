@@ -1,5 +1,5 @@
 module.exports = {
-    baseUrl: './',
+    publicPath: './',
     productionSourceMap: false,
     configureWebpack: () => {
         // 格式 key: value, 左边代表要引入资源包的名字，右边代表该模块在外面使用引用的名字
